@@ -1,5 +1,7 @@
 import React from "react";
 
+//Ernesto is now in the game!!
+
 //include images into your bundle
 import Jumbotron from "./jumbotron.jsx";
 import Cards from "./cards.jsx";
