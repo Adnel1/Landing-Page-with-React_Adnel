@@ -4,7 +4,7 @@ const Navbar = ({setView}) => {
     return (
 		<nav className="navbar navbar-dark bg-dark navbar-expand-lg mb-4">
             <div className="container">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a className="navbar-brand" href="#">Navbar</a>
                 <ul className="navbar-nav text-white">
                     <li className="nav-item">
                         <a className="nav-link active" aria-current="page" href="#" onClick = {() => setView("home")} >Home</a>

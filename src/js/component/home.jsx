@@ -10,7 +10,7 @@ import { Fragment, useState } from "react";
 //This is the main content area for the home page
 const Home = () => {
 	return (
-		<fragment>
+		<Fragment>
 			<div className="container">
 				{/*This is the jumbotron*/}
 				<Jumbotron />
@@ -19,7 +19,7 @@ const Home = () => {
 				<Cards />
 
 			</div>
-		</fragment>
+		</Fragment>
 	);
 };
 

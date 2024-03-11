@@ -1,4 +1,4 @@
-import React, { useState  } from "react";
+import React, { useState, useEffect } from "react";
 
 const CreativeMode = () => {
 
@@ -7,7 +7,13 @@ const [title, setTitle] = useState("");
 const [content, setContent] = useState("");
 const [link, setLink] = useState("");
 
-const [cardsInfo, setCardsInfo] = useState([]);
+const [cardsInfo, setCardsInfo] = useState(() => {
+    const savedCards = localStorage.getItem("cardsInfo");
+    return savedCards ? JSON.parse(savedCards) : [];
+});
+
+console.log(localStorage.getItem('cardsInfo') || "Nothing stored"); //just to check
+useEffect(() => localStorage.setItem("cardsInfo", JSON.stringify(cardsInfo)), [cardsInfo]);
 
 const cardAdd = (e) => {
     e.preventDefault();
